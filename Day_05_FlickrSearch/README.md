@@ -1,6 +1,7 @@
 # FlickrSearch
 
 Image Search via Flickr with iPad development
+
 ![Image of Yaktocat](http://i.imgur.com/uU9gjmM.png)
 
 ### Installation
