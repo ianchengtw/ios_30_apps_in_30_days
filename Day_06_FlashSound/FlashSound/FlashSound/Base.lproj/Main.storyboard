@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xds-qL-AaL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flash Sound-->
+        <scene sceneID="2Rs-fY-7qV">
+            <objects>
+                <collectionViewController id="x7n-qh-Ipy" customClass="MediaListViewController" customModule="FlashSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lri-vB-CCP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fml-sd-iPL">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaViewCell" id="A6i-8z-wI3" customClass="MediaViewCell" customModule="FlashSound" customModuleProvider="target">
+                                <rect key="frame" x="10" y="74" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qtZ-a5-O3N">
+                                            <rect key="frame" x="5" y="13" width="140" height="140"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="Evb-rb-W7K"/>
+                                                <constraint firstAttribute="height" constant="240" id="MTr-O7-7FS"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Evb-rb-W7K"/>
+                                                    <exclude reference="MTr-O7-7FS"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6J-RN-d4r" userLabel="Title">
+                                            <rect key="frame" x="5" y="158" width="140" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="O6J-RN-d4r" firstAttribute="centerX" secondItem="A6i-8z-wI3" secondAttribute="centerX" id="7je-xg-gkl"/>
+                                    <constraint firstItem="qtZ-a5-O3N" firstAttribute="width" secondItem="A6i-8z-wI3" secondAttribute="width" constant="-10" id="HDv-Ec-XcN"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="O6J-RN-d4r" secondAttribute="bottom" id="M2A-9z-aD6"/>
+                                    <constraint firstItem="qtZ-a5-O3N" firstAttribute="height" secondItem="A6i-8z-wI3" secondAttribute="height" constant="-60" id="S7S-tU-gP8"/>
+                                    <constraint firstItem="qtZ-a5-O3N" firstAttribute="top" secondItem="A6i-8z-wI3" secondAttribute="topMargin" constant="5" id="fnX-Qh-l2y"/>
+                                    <constraint firstItem="qtZ-a5-O3N" firstAttribute="centerY" secondItem="A6i-8z-wI3" secondAttribute="centerY" id="icH-OC-R7o"/>
+                                    <constraint firstItem="qtZ-a5-O3N" firstAttribute="centerX" secondItem="A6i-8z-wI3" secondAttribute="centerX" id="vUi-ze-Qr1"/>
+                                    <constraint firstItem="O6J-RN-d4r" firstAttribute="width" secondItem="A6i-8z-wI3" secondAttribute="width" constant="-10" id="wft-zr-1Oe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="icH-OC-R7o"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imageView" destination="qtZ-a5-O3N" id="Xqn-6q-pDW"/>
+                                    <outlet property="titleLabel" destination="O6J-RN-d4r" id="fdu-f9-3vZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="x7n-qh-Ipy" id="FTT-bt-Ube"/>
+                            <outlet property="delegate" destination="x7n-qh-Ipy" id="Fyh-tX-rHI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Flash Sound" id="wur-LB-KmP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dsN-AX-gR5">
+                            <connections>
+                                <segue destination="xdW-va-oCu" kind="show" id="nQT-1c-6aY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8A-Tj-qUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="314"/>
+        </scene>
+        <!--Add Music-->
+        <scene sceneID="14b-iX-KVD">
+            <objects>
+                <viewController id="xdW-va-oCu" customClass="MediaAddViewController" customModule="FlashSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZFv-by-dnc"/>
+                        <viewControllerLayoutGuide type="bottom" id="14w-cs-2ii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kCb-hA-s4e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBh-5v-zbI" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCH-TY-f4T">
+                                        <rect key="frame" x="25" y="25" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-bh-SGM" userLabel="Title Text Field">
+                                        <rect key="frame" x="25" y="71" width="550" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-Ik-Pvu" userLabel="Media Pick Button">
+                                        <rect key="frame" x="25" y="126" width="121" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Pick a music"/>
+                                        <connections>
+                                            <action selector="mediaPickButtonWasPressed:" destination="xdW-va-oCu" eventType="touchUpInside" id="faJ-yB-E1F"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHP-s7-vGy">
+                                        <rect key="frame" x="25" y="193" width="550" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-6m-N93" userLabel="Image Pick Button">
+                                        <rect key="frame" x="25" y="239" width="132" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Pick an image"/>
+                                        <connections>
+                                            <action selector="imagePickButtonWasPressed:" destination="xdW-va-oCu" eventType="touchUpInside" id="6OC-N7-OZb"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-9q-Vm1">
+                                        <rect key="frame" x="200" y="306" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Jgf-1t-i47"/>
+                                            <constraint firstAttribute="width" constant="200" id="Wyj-f5-cdI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="eHP-s7-vGy" firstAttribute="top" secondItem="eAt-Ik-Pvu" secondAttribute="bottom" constant="25" id="4dN-Up-cpX"/>
+                                    <constraint firstItem="eAt-Ik-Pvu" firstAttribute="top" secondItem="eFn-bh-SGM" secondAttribute="bottom" constant="25" id="AEZ-FE-X5b"/>
+                                    <constraint firstItem="lf8-9q-Vm1" firstAttribute="top" secondItem="FQt-6m-N93" secondAttribute="bottom" constant="25" id="FNQ-mB-PAs"/>
+                                    <constraint firstItem="eHP-s7-vGy" firstAttribute="width" secondItem="hBh-5v-zbI" secondAttribute="width" constant="-50" id="M0v-CW-sVT"/>
+                                    <constraint firstItem="eFn-bh-SGM" firstAttribute="centerX" secondItem="hBh-5v-zbI" secondAttribute="centerX" id="MWD-gr-hhy"/>
+                                    <constraint firstItem="FQt-6m-N93" firstAttribute="leading" secondItem="nCH-TY-f4T" secondAttribute="leading" id="QWi-gb-aQf"/>
+                                    <constraint firstItem="nCH-TY-f4T" firstAttribute="top" secondItem="hBh-5v-zbI" secondAttribute="top" constant="25" id="Zdd-gZ-VwJ"/>
+                                    <constraint firstItem="lf8-9q-Vm1" firstAttribute="centerX" secondItem="hBh-5v-zbI" secondAttribute="centerX" id="aMx-zz-8f2"/>
+                                    <constraint firstItem="eAt-Ik-Pvu" firstAttribute="leading" secondItem="nCH-TY-f4T" secondAttribute="leading" id="cbV-vl-GEB"/>
+                                    <constraint firstItem="eFn-bh-SGM" firstAttribute="width" secondItem="hBh-5v-zbI" secondAttribute="width" constant="-50" id="dQH-QR-A0F"/>
+                                    <constraint firstAttribute="bottom" secondItem="lf8-9q-Vm1" secondAttribute="bottom" constant="25" id="e72-IV-Gog"/>
+                                    <constraint firstItem="eHP-s7-vGy" firstAttribute="centerX" secondItem="hBh-5v-zbI" secondAttribute="centerX" id="fUW-eR-Msw"/>
+                                    <constraint firstItem="eFn-bh-SGM" firstAttribute="top" secondItem="nCH-TY-f4T" secondAttribute="bottom" constant="25" id="hoX-T5-jeE"/>
+                                    <constraint firstItem="nCH-TY-f4T" firstAttribute="leading" secondItem="hBh-5v-zbI" secondAttribute="leading" constant="74" id="ifV-RR-zBA"/>
+                                    <constraint firstItem="FQt-6m-N93" firstAttribute="top" secondItem="eHP-s7-vGy" secondAttribute="bottom" constant="25" id="kTk-LT-dB2"/>
+                                    <constraint firstItem="nCH-TY-f4T" firstAttribute="leading" secondItem="hBh-5v-zbI" secondAttribute="leading" constant="25" id="l06-2W-FBR"/>
+                                    <constraint firstItem="eHP-s7-vGy" firstAttribute="leading" secondItem="nCH-TY-f4T" secondAttribute="leading" id="p0W-Zt-9uU"/>
+                                    <constraint firstItem="lf8-9q-Vm1" firstAttribute="width" secondItem="hBh-5v-zbI" secondAttribute="width" constant="-50" id="yNJ-ZF-jsY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ifV-RR-zBA"/>
+                                        <exclude reference="p0W-Zt-9uU"/>
+                                        <exclude reference="e72-IV-Gog"/>
+                                        <exclude reference="yNJ-ZF-jsY"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="14w-cs-2ii" firstAttribute="top" secondItem="hBh-5v-zbI" secondAttribute="bottom" id="QoH-xY-iDp"/>
+                            <constraint firstItem="hBh-5v-zbI" firstAttribute="height" secondItem="kCb-hA-s4e" secondAttribute="height" id="SWt-6U-eaZ"/>
+                            <constraint firstItem="hBh-5v-zbI" firstAttribute="width" secondItem="kCb-hA-s4e" secondAttribute="width" id="Yt9-sZ-H9T"/>
+                            <constraint firstItem="hBh-5v-zbI" firstAttribute="top" secondItem="ZFv-by-dnc" secondAttribute="bottom" id="bt8-Hu-2kc"/>
+                            <constraint firstItem="hBh-5v-zbI" firstAttribute="centerX" secondItem="kCb-hA-s4e" secondAttribute="centerX" id="lzB-fn-n2I"/>
+                            <constraint firstItem="hBh-5v-zbI" firstAttribute="centerY" secondItem="kCb-hA-s4e" secondAttribute="centerY" id="ur9-Q7-aFD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SWt-6U-eaZ"/>
+                                <exclude reference="ur9-Q7-aFD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Music" id="B3R-mo-yiP" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yGr-Ir-7cj">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="xdW-va-oCu" id="RK0-v4-gvh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imagePickButton" destination="FQt-6m-N93" id="5Qa-tO-ufM"/>
+                        <outlet property="imageView" destination="lf8-9q-Vm1" id="6MF-vk-T6w"/>
+                        <outlet property="mediaNameLabel" destination="eHP-s7-vGy" id="hDO-jR-OIv"/>
+                        <outlet property="mediaPickButton" destination="eAt-Ik-Pvu" id="3tL-XH-lDd"/>
+                        <outlet property="titleInput" destination="eFn-bh-SGM" id="WhH-SR-k3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjI-MK-u7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="314"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7EV-9l-hXf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xds-qL-AaL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8I8-qh-be6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x7n-qh-Ipy" kind="relationship" relationship="rootViewController" id="6uf-wY-xfc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckr-s0-gXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music_icon" width="512" height="512"/>
+    </resources>
+</document>
